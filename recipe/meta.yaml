@@ -1,5 +1,5 @@
 {% set name = "bargeparse" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bargeparse-{{ version }}.tar.gz
-  sha256: 3d61663f6ad3f09272a5b13015c8720cecca1b19d39f0b22c97b75bfdb8c5172
+  sha256: bf9bd349ef4980a95bf1711dc18a16e63510a30d3dd73061c72baeb3336d449b
 
 build:
   number: 0
