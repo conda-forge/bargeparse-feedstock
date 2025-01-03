@@ -7,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bargeparse-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bargeparse-{{ version }}.tar.gz
   sha256: bf9bd349ef4980a95bf1711dc18a16e63510a30d3dd73061c72baeb3336d449b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -31,6 +31,7 @@ test:
     - pytest
   requires:
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/shangxiao/bargeparse
